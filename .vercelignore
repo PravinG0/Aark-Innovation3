@@ -1,0 +1,13 @@
+node_modules
+tests
+dev-server.js
+capture_*.js
+diagnose_*.js
+dump_*.js
+verify_*.js
+test_*.js
+/*.png
+*.log
+.git
+.agents
+

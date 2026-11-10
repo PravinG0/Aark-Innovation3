@@ -1,0 +1,23 @@
+# Dependencies
+node_modules/
+
+# Local Dev & Test Infrastructure
+tests/
+dev-server.js
+capture_*.js
+diagnose_*.js
+dump_*.js
+verify_*.js
+test_*.js
+
+# Root test screenshots (leaves Assets/images/ intact)
+/*.png
+*.log
+
+# Vercel & IDE
+.vercel
+.agents/
+.vscode/
+.idea/
+.DS_Store
+

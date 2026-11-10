@@ -1,0 +1,1584 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <title>AARK Innovations | Enterprise Modernization</title>
+  <meta name="description" content="AARK Innovations partners with mid-market and enterprise leadership to eliminate manual bottlenecks, modernize Oracle ERP ecosystems, and deploy grounded Data & AI platforms.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232563EB'/%3E%3Cpath d='M8 24L16 8L24 24M11 19H21' stroke='white' stroke-width='2.5' stroke-linecap='round'/%3E%3C/svg%3E">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=2.5">
+
+  <style id="criticalThemeOverrides">
+    /* 1. Header MUST NOT be sticky or fixed under any circumstance */
+    .site-header,
+    #siteHeader,
+    header.site-header {
+      position: absolute !important;
+      top: 0 !important;
+      left: 0 !important;
+      right: 0 !important;
+    }
+
+    /* 2. Hero Content Left-Alignment */
+    .hero-container {
+      align-items: flex-start !important;
+      text-align: left !important;
+    }
+    .hero-pill-wrap,
+    .hero-cta-row,
+    .stage-feature-badges,
+    .scroll-down-hint {
+      justify-content: flex-start !important;
+      width: 100% !important;
+    }
+    .hero-headline,
+    .hero-subtitle,
+    .metric-card {
+      text-align: left !important;
+    }
+    .hero-headline {
+      margin-left: 0 !important;
+      margin-right: auto !important;
+      max-width: 820px !important;
+    }
+    .hero-subtitle {
+      margin-left: 0 !important;
+      margin-right: auto !important;
+      max-width: 680px !important;
+    }
+    .metrics-ribbon-wrapper {
+      max-width: 1140px !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+
+    /* 3. Hero Left-Weighted Cinematic Scrim (High Contrast for Text, Open Stage for Video) */
+    .hero-scrim-radial {
+      background: linear-gradient(90deg, rgba(7, 9, 14, 0.88) 0%, rgba(7, 9, 14, 0.52) 45%, rgba(7, 9, 14, 0.08) 85%) !important;
+    }
+
+    [data-theme="light"] .hero-video {
+      filter: invert(0.96) hue-rotate(180deg) contrast(1.15) brightness(1.02) !important;
+      mix-blend-mode: multiply !important;
+      opacity: 0.88 !important;
+    }
+
+    [data-theme="light"] .hero-scrim-radial {
+      background: linear-gradient(90deg, rgba(248, 250, 252, 0.94) 0%, rgba(248, 250, 252, 0.58) 48%, rgba(248, 250, 252, 0.12) 85%) !important;
+    }
+
+    [data-theme="light"] .hero-scrim-top {
+      background: linear-gradient(180deg, rgba(248, 250, 252, 0.85) 0%, rgba(248, 250, 252, 0) 100%) !important;
+    }
+
+    [data-theme="light"] .hero-scrim-bottom {
+      background: linear-gradient(180deg, rgba(248, 250, 252, 0) 0%, rgba(248, 250, 252, 0.6) 60%, #f8fafc 100%) !important;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Real-Time Scroll Progress Indicator -->
+  <div class="scroll-progress-track">
+    <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+  </div>
+
+  <!-- Ambient Audio Toast Notification -->
+  <div class="ambient-toast" id="ambientToast" aria-live="polite"></div>
+
+  <!-- Primary Header & Navigation (Absolute - Never Sticky) -->
+  <header class="site-header" id="siteHeader" style="position: absolute !important; top: 0 !important; left: 0 !important; right: 0 !important;">
+    <div class="header-container">
+      <div class="brand-group">
+        <a href="#hero-section" class="brand-logo" aria-label="AARK Innovations Home">
+          <div class="brand-symbol-box">
+            <svg class="brand-symbol" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 28L18 8L28 28" stroke="url(#logoGlow)" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 20H24" stroke="#00E5FF" stroke-width="2.4" stroke-linecap="round"/>
+              <circle cx="18" cy="14" r="2.2" fill="#00E5FF"/>
+              <defs>
+                <linearGradient id="logoGlow" x1="8" y1="8" x2="28" y2="28" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#00E5FF"/>
+                  <stop offset="1" stop-color="#3B82F6"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <div class="brand-text">
+            <span class="brand-name">AARK <span class="brand-accent">Innovations</span></span>
+            <span class="category-badge">Enterprise Modernization</span>
+          </div>
+        </a>
+      </div>
+
+      <nav class="primary-nav" id="primaryNav" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#hero-section" class="nav-link active">Overview</a></li>
+          <li><a href="#difference-section" class="nav-link">The Difference</a></li>
+          <li><a href="#practice-section" class="nav-link">Practices in Action</a></li>
+          <li><a href="#case-studies-section" class="nav-link">Case Studies</a></li>
+          <li><a href="#calculator-section" class="nav-link">ROI Simulator</a></li>
+          <li><a href="#models-section" class="nav-link">Engagement</a></li>
+          <li><a href="#tech-section" class="nav-link">Ecosystem</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <!-- Consolidated Micro-Controls Dock -->
+        <div class="header-controls-dock" role="toolbar" aria-label="Utility controls">
+          <!-- Theme Switcher -->
+          <button class="micro-control theme-toggle" id="themeToggle" aria-label="Toggle light or dark edition" title="Toggle Theme">
+            <span class="micro-svg-wrap" aria-hidden="true">
+              <svg class="micro-svg svg-moon" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/>
+              </svg>
+              <svg class="micro-svg svg-sun" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"/>
+              </svg>
+            </span>
+            <span class="ctrl-icon theme-icon sr-only" aria-hidden="true">🌙</span>
+            <span class="ctrl-label theme-label sr-only">Dark Edition</span>
+          </button>
+
+          <!-- Audio Switcher -->
+          <button class="micro-control audio-toggle" id="audioToggle" aria-label="Toggle ambient audio soundtrack" title="Toggle Ambient Soundscape">
+            <span class="audio-led" aria-hidden="true"></span>
+            <span class="micro-svg-wrap" aria-hidden="true">
+              <svg class="micro-svg svg-speaker" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.617.776L4.858 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.858l3.525-3.776a1 1 0 011.0-.148zM14.657 5.343a1 1 0 011.414 0A8.966 8.966 0 0118 10a8.966 8.966 0 01-1.929 4.657 1 1 0 01-1.414-1.414A6.971 6.971 0 0016 10c0-1.879-.74-3.585-1.929-4.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A4.978 4.978 0 0114 10a4.978 4.978 0 01-.757 2.657 1 1 0 01-1.415-1.414A2.986 2.986 0 0012 10a2.986 2.986 0 00-.586-1.829 1 1 0 010-1.414z" clip-rule="evenodd"/>
+              </svg>
+            </span>
+            <span class="ctrl-icon audio-icon sr-only" id="audioIcon" aria-hidden="true">🔈</span>
+            <span class="ctrl-label audio-label sr-only" id="audioLabel">Audio OFF</span>
+          </button>
+        </div>
+
+        <!-- Header CTA -->
+        <a href="#contact-section" class="btn btn-primary header-cta">
+          <span>Book Consultation</span>
+          <span class="btn-arrow">→</span>
+        </a>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Toggle mobile menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- CHAPTER 00: The Opening Horizon (Hero Section) -->
+    <section class="hero-section" id="hero-section">
+      <!-- Ambient Background Video Player with Smooth Fallback -->
+      <div class="hero-media-wrapper">
+        <video 
+          id="heroVideo" 
+          class="hero-video" 
+          autoplay 
+          muted 
+          loop 
+          playsinline
+          preload="auto">
+          <source src="Assets/Videos/Enterprise_data_orchestration_1080p.mp4" type="video/mp4">
+          <source src="Assets/Videos/Enterprise_data_orchestration_pr%E2%80%A6_b2e06510_1080p.mp4" type="video/mp4">
+        </video>
+        <div class="hero-scrim-top"></div>
+        <div class="hero-scrim-radial"></div>
+        <div class="hero-scrim-bottom"></div>
+      </div>
+
+      <!-- Hero Video Status Pill -->
+      <div class="hero-floating-controls">
+        <button id="videoPlayPauseBtn" class="video-status-pill" title="Toggle ambient video motion">
+          <span class="pulse-indicator"></span>
+          <span id="videoStatusText">Modernization Engine Active</span>
+        </button>
+      </div>
+
+      <div class="container hero-container">
+        <!-- Location Status Pill -->
+        <div class="hero-pill-wrap animate-reveal">
+          <div class="location-status-pill" id="locationStatusPill">
+            <span class="pulse-dot"></span>
+            <span class="status-text" id="statusPillText">Enterprise Modernization • Fort Mill, SC | Dark Edition</span>
+          </div>
+        </div>
+
+        <!-- Main Headline -->
+        <h1 class="hero-headline animate-reveal delay-1">
+          Modernize How Your <br class="br-desktop">
+          <span class="hero-gradient-text">Business Operates.</span>
+        </h1>
+
+        <!-- Executive Subtitle -->
+        <p class="hero-subtitle animate-reveal delay-2">
+          AARK Innovations partners with mid-market and enterprise leadership to eliminate manual bottlenecks, modernize Oracle ERP ecosystems, and deploy grounded Data &amp; AI platforms. Fixed scope. Transparent delivery. Zero bloated overhead.
+        </p>
+
+        <!-- Primary Calls-to-Action -->
+        <div class="hero-cta-row animate-reveal delay-3">
+          <a href="#practice-section" class="btn btn-primary btn-xl">
+            <span>Explore Core Practices</span>
+            <span class="btn-arrow">→</span>
+          </a>
+          <a href="#case-studies-section" class="btn btn-glass btn-xl">
+            <span>View Verified Case Studies</span>
+          </a>
+        </div>
+
+        <!-- Scroll down indicator to Performance Metrics Section -->
+        <div class="scroll-down-hint animate-reveal delay-4">
+          <a href="#metrics-section" class="scroll-arrow-link" aria-label="Scroll to Verified Performance Metrics">
+            <span class="scroll-label">Verified Performance Metrics</span>
+            <span class="animated-chevron">↓</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTER-STAGE: Verified Performance Metrics & Enterprise Architecture Ribbon -->
+    <section class="section metrics-ribbon-section" id="metrics-section" aria-label="Key Performance Metrics">
+      <div class="metrics-grid-ambient"></div>
+      <div class="container">
+        <div class="section-heading text-center scroll-fade-in">
+          <div class="heading-badge-wrap">
+            <span class="pill-badge pill-cyan">
+              <span class="pulse-dot"></span>
+              <span>Proven Enterprise Velocity</span>
+            </span>
+          </div>
+          <h2 class="section-title">Architectural Outcomes. <span class="hero-gradient-text">Quantified.</span></h2>
+          <p class="section-lead">
+            Every AARK engagement is anchored on measurable efficiency gains, zero billing bloat, and enterprise-grade operational velocity.
+          </p>
+        </div>
+
+        <!-- Key Metrics Ribbon 4-Card Bento Grid -->
+        <div class="metrics-ribbon-wrapper scroll-reveal-card">
+          <div class="metrics-ribbon-grid">
+            <!-- Metric Card 1: Velocity -->
+            <div class="metric-card metric-card-cyan" data-card="velocity">
+              <div class="metric-card-top">
+                <span class="metric-index-tag">VELOCITY 01</span>
+                <span class="metric-badge-pill pill-cyan">Document AI</span>
+              </div>
+              <div class="metric-number-row">
+                <span class="metric-val text-cyan">-60%</span>
+              </div>
+              <div class="metric-content-wrap">
+                <h3 class="metric-title">RFP Drafting Time</h3>
+                <p class="metric-sub">Document extraction &amp; AI lakehouse</p>
+              </div>
+              <div class="metric-micro-meter">
+                <div class="meter-labels">
+                  <span>Legacy: 14 Days</span>
+                  <span class="text-cyan">AARK: 4 Days</span>
+                </div>
+                <div class="meter-track">
+                  <div class="meter-fill fill-cyan" style="width: 40%"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Metric Card 2: Speedrun -->
+            <div class="metric-card metric-card-blue" data-card="speedrun">
+              <div class="metric-card-top">
+                <span class="metric-index-tag">SPEEDRUN 02</span>
+                <span class="metric-badge-pill pill-blue">Automated CPQ</span>
+              </div>
+              <div class="metric-number-row">
+                <span class="metric-val text-blue">20 Mins</span>
+              </div>
+              <div class="metric-content-wrap">
+                <h3 class="metric-title">Quote Turnaround</h3>
+                <p class="metric-sub">Down from 3-day spreadsheet backlog</p>
+              </div>
+              <div class="metric-micro-meter">
+                <div class="meter-labels">
+                  <span>Spreadsheets: 72h</span>
+                  <span class="text-blue">Engine: 20m</span>
+                </div>
+                <div class="meter-track">
+                  <div class="meter-fill fill-blue" style="width: 15%"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Metric Card 3: Accountability -->
+            <div class="metric-card metric-card-purple" data-card="accountability">
+              <div class="metric-card-top">
+                <span class="metric-index-tag">ACCOUNTABILITY 03</span>
+                <span class="metric-badge-pill pill-purple">Zero Bench</span>
+              </div>
+              <div class="metric-number-row">
+                <span class="metric-val text-purple">100%</span>
+              </div>
+              <div class="metric-content-wrap">
+                <h3 class="metric-title">Senior Architect Led</h3>
+                <p class="metric-sub">Zero junior bench staffing</p>
+              </div>
+              <div class="metric-micro-meter">
+                <div class="meter-labels">
+                  <span>Principals: 100%</span>
+                  <span class="text-purple">Juniors: 0%</span>
+                </div>
+                <div class="meter-track">
+                  <div class="meter-fill fill-purple" style="width: 100%"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Metric Card 4: Predictability -->
+            <div class="metric-card metric-card-emerald" data-card="predictability">
+              <div class="metric-card-top">
+                <span class="metric-index-tag">PREDICTABILITY 04</span>
+                <span class="metric-badge-pill pill-emerald">Fixed Scope</span>
+              </div>
+              <div class="metric-number-row">
+                <span class="metric-val text-emerald">$0</span>
+              </div>
+              <div class="metric-content-wrap">
+                <h3 class="metric-title">Surprise Billing Meters</h3>
+                <p class="metric-sub">Fixed-scope predictability</p>
+              </div>
+              <div class="metric-micro-meter">
+                <div class="meter-labels">
+                  <span>Overrun Risk: $0</span>
+                  <span class="text-emerald">Predictability: 100%</span>
+                </div>
+                <div class="meter-track">
+                  <div class="meter-fill fill-emerald" style="width: 100%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Certified Enterprise Architecture Dock -->
+        <div class="metrics-dock-wrapper scroll-fade-in">
+          <div class="metrics-dock-header">
+            <span class="dock-header-tag">CERTIFIED ENTERPRISE RUNTIMES</span>
+            <div class="dock-telemetry-status">
+              <span class="dock-status-dot"></span>
+              <span class="dock-status-text">Verified Architecture Protocols</span>
+            </div>
+          </div>
+          <div class="stage-feature-badges">
+            <div class="feature-badge-pill badge-cyan">
+              <span class="badge-icon">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+              </span>
+              <span class="badge-text"><strong>Modernization Core:</strong> Light Studio 3D engine stream</span>
+            </div>
+            <div class="feature-badge-pill badge-blue">
+              <span class="badge-icon">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
+              </span>
+              <span class="badge-text"><strong>Oracle Fusion Cloud &amp; EBS:</strong> Certified architecture &amp; zero-drift rollout</span>
+            </div>
+            <div class="feature-badge-pill badge-purple">
+              <span class="badge-icon">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+              </span>
+              <span class="badge-text"><strong>Grounded AI Data Fabric:</strong> Snowflake, Bedrock, Databricks &amp; dbt</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Scroll down indicator to The Difference -->
+        <div class="metrics-scroll-down-hint text-center">
+          <a href="#difference-section" class="scroll-arrow-link" aria-label="Scroll to The Difference">
+            <span class="scroll-label">Explore the AARK Difference</span>
+            <span class="animated-chevron">↓</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHAPTER 01: The Operational Breakdown vs The Modern Engine (Why AARK) -->
+    <section class="section difference-section" id="difference-section">
+      <div class="container">
+        <div class="section-heading text-center scroll-fade-in">
+          <span class="section-tag">Chapter 01 • The Delivery Model</span>
+          <h2 class="section-title">Enterprise Modernization Without the Big-4 Bloat.</h2>
+          <p class="section-lead">
+            Legacy consultancies bill open-ended hours with junior teams learning on your dime. AARK Innovations provides senior, accountable practitioners who build real working software and leave your team self-sufficient.
+          </p>
+        </div>
+
+        <!-- Interactive Transformation Simulator: The Big-4 Nightmare vs The AARK Standard -->
+        <div class="transformation-simulator-card bento-cockpit scroll-reveal-card">
+          <div class="sim-header">
+            <div class="sim-title-group">
+              <span class="sim-eyebrow">Interactive Delivery Comparison</span>
+              <h3 class="sim-title" id="simTitleText">The AARK High-Velocity Standard</h3>
+            </div>
+            <!-- Interactive Switcher Controls -->
+            <div class="sim-toggle-wrap">
+              <button class="sim-toggle-btn active" id="btnSelectAark">
+                <span class="btn-glow-dot"></span>
+                <span>AARK Innovations (Senior-Led)</span>
+              </button>
+              <button class="sim-toggle-btn" id="btnSelectBig4">
+                <span class="btn-glow-dot"></span>
+                <span>Traditional Big-4 (Junior Bench)</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Dynamic Comparison Split Stage -->
+          <div class="sim-stage-grid" id="simStageGrid">
+            <!-- Left Narrative & Inclusions -->
+            <div class="sim-left-col">
+              <div class="sim-status-banner aark-mode" id="simStatusBanner">
+                <div class="banner-luminous-glow"></div>
+                <span class="sim-mode-tag" id="simModeTag">GUARANTEED OUTCOME</span>
+                <h4 class="sim-headline" id="simHeadline">100% Senior Principal Architects On The Tools</h4>
+              </div>
+              <p class="sim-narrative-text" id="simNarrativeText">
+                The experts who scope your engagement are the exact senior technical and functional architects who execute the implementation. No bait-and-switch. You get direct access to principals with 15+ years of enterprise deployment experience.
+              </p>
+
+              <div class="sim-points-list" id="simPointsList">
+                <div class="sim-point-item">
+                  <span class="point-icon text-cyan">✓</span>
+                  <div>
+                    <strong>Direct Senior Leadership:</strong> No junior bench learning curve or layered billing pyramids.
+                  </div>
+                </div>
+                <div class="sim-point-item">
+                  <span class="point-icon text-cyan">✓</span>
+                  <div>
+                    <strong>Fixed Scope &amp; Predictability:</strong> Milestone-based pricing with guaranteed working software handovers.
+                  </div>
+                </div>
+                <div class="sim-point-item">
+                  <span class="point-icon text-cyan">✓</span>
+                  <div>
+                    <strong>Total IP Handover:</strong> Your team owns every dbt model, Python script, and Oracle pipeline configuration.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Interactive Graphic / Visual SVG Comparison -->
+            <div class="sim-right-col">
+              <div class="sim-visual-dashboard" id="simVisualDashboard">
+                <div class="dash-top-bar">
+                  <div class="dash-status-cluster">
+                    <span class="dash-radar-dot"></span>
+                    <span class="dash-chip" id="dashChipStatus">Mode: Senior Practitioner Pod</span>
+                  </div>
+                  <span class="dash-timer" id="dashTimerText">Production Target: 4 Weeks</span>
+                </div>
+
+                <!-- Live Animated SVG Comparison Diagram -->
+                <div class="dash-svg-container">
+                  <svg viewBox="0 0 360 200" fill="none" class="sim-dynamic-svg" id="simDynamicSvg">
+                    <!-- AARK Mode: Clean Linear Speed Pipeline -->
+                    <g id="svgAarkGraph">
+                      <line x1="40" y1="100" x2="320" y2="100" stroke="#1E293B" stroke-width="4"/>
+                      <line x1="40" y1="100" x2="320" y2="100" stroke="url(#aarkLaserGrad)" stroke-width="4" stroke-dasharray="80 120" class="animated-laser-path"/>
+                      
+                      <!-- Node 1: Scope -->
+                      <circle cx="60" cy="100" r="18" fill="#0D121C" stroke="#00E5FF" stroke-width="2.5"/>
+                      <text x="60" y="104" fill="#00E5FF" font-size="11" font-weight="bold" font-family="monospace" text-anchor="middle">S01</text>
+                      <text x="60" y="136" fill="#94A3B8" font-size="10" font-family="sans-serif" text-anchor="middle">Fixed Scope</text>
+
+                      <!-- Node 2: Build -->
+                      <circle cx="180" cy="100" r="18" fill="#0D121C" stroke="#3B82F6" stroke-width="2.5"/>
+                      <text x="180" y="104" fill="#3B82F6" font-size="11" font-weight="bold" font-family="monospace" text-anchor="middle">S02</text>
+                      <text x="180" y="136" fill="#94A3B8" font-size="10" font-family="sans-serif" text-anchor="middle">Principal Code</text>
+
+                      <!-- Node 3: Handover -->
+                      <circle cx="300" cy="100" r="18" fill="#0D121C" stroke="#10B981" stroke-width="2.5"/>
+                      <text x="300" y="104" fill="#10B981" font-size="11" font-weight="bold" font-family="monospace" text-anchor="middle">V1</text>
+                      <text x="300" y="136" fill="#10B981" font-size="10" font-family="sans-serif" text-anchor="middle">Production V1</text>
+                    </g>
+                    <defs>
+                      <linearGradient id="aarkLaserGrad" x1="0" y1="0" x2="1" y2="0">
+                        <stop offset="0%" stop-color="#00E5FF"/>
+                        <stop offset="100%" stop-color="#10B981"/>
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </div>
+
+                <!-- Metrics Strip in Simulator -->
+                <div class="dash-metrics-strip" id="dashMetricsStrip">
+                  <div class="d-metric">
+                    <span class="d-val text-cyan" id="dVal1">0%</span>
+                    <span class="d-lbl" id="dLbl1">Junior Bench Staff</span>
+                  </div>
+                  <div class="d-metric">
+                    <span class="d-val text-blue" id="dVal2">Fixed</span>
+                    <span class="d-lbl" id="dLbl2">Pricing &amp; Scope</span>
+                  </div>
+                  <div class="d-metric">
+                    <span class="d-val text-emerald" id="dVal3">4 Weeks</span>
+                    <span class="d-lbl" id="dLbl3">Production Speed</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3 Core Pillars -->
+        <div class="pillars-deck">
+          <!-- Pillar 1 -->
+          <div class="pillar-tile bento-tile scroll-reveal-card" data-delay="100">
+            <div class="pillar-spotlight"></div>
+            <div class="pillar-top-row">
+              <div class="pillar-icon-box cyan-glow">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+              </div>
+              <span class="pillar-seq">Pillar 01</span>
+            </div>
+            <h3 class="pillar-name">Direct Senior Leadership</h3>
+            <p class="pillar-text">
+              The experts who scope your engagement are the exact senior technical and functional architects who execute the implementation. No bait-and-switch.
+            </p>
+            <div class="pillar-link-row">
+              <a href="#contact-section" class="arrow-action-link" data-topic="Dedicated Architecture Pod">
+                <span>Direct access to principal consultants</span>
+                <span class="arrow">→</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Pillar 2 -->
+          <div class="pillar-tile bento-tile featured-tile scroll-reveal-card" data-delay="200">
+            <div class="pillar-spotlight"></div>
+            <div class="pillar-badge">Core Commitment</div>
+            <div class="pillar-top-row">
+              <div class="pillar-icon-box blue-glow">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                </svg>
+              </div>
+              <span class="pillar-seq">Pillar 02</span>
+            </div>
+            <h3 class="pillar-name">Fixed Scope &amp; Predictability</h3>
+            <p class="pillar-text">
+              Clear deliverables, fixed pricing, and milestone-driven software handovers. You know the exact cost and timeline before any code or configuration begins.
+            </p>
+            <div class="pillar-link-row">
+              <a href="#contact-section" class="arrow-action-link" data-topic="Fixed-Scope Modernization">
+                <span>Guaranteed working software handovers</span>
+                <span class="arrow">→</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Pillar 3 -->
+          <div class="pillar-tile bento-tile scroll-reveal-card" data-delay="300">
+            <div class="pillar-spotlight"></div>
+            <div class="pillar-top-row">
+              <div class="pillar-icon-box purple-glow">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                  <polyline points="17 6 23 6 23 12"></polyline>
+                </svg>
+              </div>
+              <span class="pillar-seq">Pillar 03</span>
+            </div>
+            <h3 class="pillar-name">Measurable ROI Focus</h3>
+            <p class="pillar-text">
+              Every project is anchored by a measurable operational outcome: faster quotes, reduced manual hours, or optimized cloud consumption.
+            </p>
+            <div class="pillar-link-row">
+              <a href="#calculator-section" class="arrow-action-link">
+                <span>Business metrics over billable hours</span>
+                <span class="arrow">→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHAPTER 02: Living Architecture (Consulting Practices with Interactive Live Demonstrations) -->
+    <section class="section practice-section" id="practice-section">
+      <div class="container">
+        <div class="section-heading text-center scroll-fade-in">
+          <span class="section-tag">Chapter 02 • Core Engineering</span>
+          <h2 class="section-title">Technical Mastery Across Three Enterprise Pillars</h2>
+          <p class="section-lead">
+            Explore our three core consulting disciplines. Each practice includes an interactive architectural simulation showing how our senior practitioners modernize your workflows.
+          </p>
+        </div>
+
+        <div class="practice-cards-stack">
+          <!-- Practice 1: Oracle ERP Solutions with Interactive Migration Timeline -->
+          <article class="practice-feature-card architectural-showcase scroll-reveal-card" id="practice-oracle">
+            <div class="practice-media-pane">
+              <div class="practice-photo-frame">
+                <img 
+                  src="Assets/images/Oracle ERP Solutions.png" 
+                  alt="Oracle ERP Solutions - Fusion Cloud and E-Business Suite Modernization"
+                  class="practice-photo"
+                  loading="lazy">
+                <div class="media-vignette-scrim"></div>
+                <div class="media-floating-tag">
+                  <span class="live-pulse"></span>
+                  <span>Oracle Cloud Architecture</span>
+                </div>
+              </div>
+
+              <!-- Interactive Live EBS to Cloud Pipeline Demonstration / Terminal Monitor -->
+              <div class="interactive-practice-demo terminal-monitor">
+                <div class="demo-top-bar terminal-bar">
+                  <div class="terminal-traffic-lights">
+                    <span class="traffic-light red"></span>
+                    <span class="traffic-light yellow"></span>
+                    <span class="traffic-light green"></span>
+                  </div>
+                  <span class="demo-badge">LIVE ARCHITECTURE DEMO</span>
+                  <button type="button" class="demo-action-btn" id="btnRunOracleSim">Simulate Migration Wave →</button>
+                </div>
+                <div class="terminal-body">
+                  <div class="demo-pipeline-svg-box">
+                    <svg viewBox="0 0 420 80" fill="none" class="pipeline-flow-svg">
+                      <!-- Step 1: On-Prem -->
+                      <rect x="10" y="20" width="100" height="40" rx="6" fill="#0D121C" stroke="#475569" stroke-width="1.5" class="svg-node-box"/>
+                      <text x="60" y="44" fill="#94A3B8" font-size="10" font-family="monospace" text-anchor="middle" class="svg-node-text">On-Prem EBS</text>
+                      
+                      <!-- Arrow 1 with Animated Dash -->
+                      <path d="M 110 40 L 175 40" stroke="#00E5FF" stroke-width="2" stroke-dasharray="4 4" class="svg-dash-anim"/>
+                      <polygon points="175,36 185,40 175,44" fill="#00E5FF"/>
+
+                      <!-- Step 2: OIC Bridge -->
+                      <rect x="185" y="15" width="110" height="50" rx="6" fill="#131A29" stroke="#3B82F6" stroke-width="1.8" class="svg-node-box bridge"/>
+                      <text x="240" y="38" fill="#FFFFFF" font-size="11" font-weight="bold" font-family="sans-serif" text-anchor="middle" class="svg-node-title">OIC Automated</text>
+                      <text x="240" y="52" fill="#60A5FA" font-size="9" font-family="monospace" text-anchor="middle" class="svg-node-sub">FBDI Batches</text>
+
+                      <!-- Arrow 2 with Animated Dash -->
+                      <path d="M 295 40 L 350 40" stroke="#00E5FF" stroke-width="2" stroke-dasharray="4 4" class="svg-dash-anim"/>
+                      <polygon points="350,36 360,40 350,44" fill="#00E5FF"/>
+
+                      <!-- Step 3: Fusion Cloud -->
+                      <rect x="360" y="20" width="55" height="40" rx="6" fill="rgba(16,185,129,0.2)" stroke="#10B981" stroke-width="1.8" class="svg-node-box dest"/>
+                      <text x="387" y="44" fill="#34D399" font-size="10" font-weight="bold" font-family="sans-serif" text-anchor="middle">Fusion</text>
+                    </svg>
+                  </div>
+                  <div class="demo-status-pill terminal-status-telemetry" id="oracleSimStatus">Status: Ready • Zero-Drift Pre-Validation Passed</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="practice-content-pane">
+              <div class="practice-meta">
+                <span class="pill-badge pill-blue">Certified</span>
+                <span class="practice-subtitle">Fusion Cloud ERP &amp; E-Business Suite</span>
+              </div>
+              <h3 class="practice-heading">Oracle ERP Solutions</h3>
+              <p class="practice-desc">
+                Full lifecycle implementation, seamless migration from on-prem EBS, and managed cloud engineering across Financials, Procurement, Supply Chain (SCM), Projects, and HCM.
+              </p>
+              <div class="practice-capabilities feature-grid-wrap">
+                <div class="cap-heading">Core Capabilities:</div>
+                <div class="cap-grid pill-matrix">
+                  <div class="cap-item"><span class="cap-check"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M2.5 6.2L4.6 8.5L9.5 3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Oracle Integration Cloud (OIC)</span></div>
+                  <div class="cap-item"><span class="cap-check"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M2.5 6.2L4.6 8.5L9.5 3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>FBDI Batch Automation &amp; Web Services</span></div>
+                  <div class="cap-item"><span class="cap-check"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M2.5 6.2L4.6 8.5L9.5 3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>OTBI &amp; BI Publisher Analytics</span></div>
+                  <div class="cap-item"><span class="cap-check"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M2.5 6.2L4.6 8.5L9.5 3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Quarterly Update Stabilization &amp; Testing</span></div>
+                </div>
+              </div>
+              <div class="practice-footer">
+                <a href="#contact-section" class="btn btn-outline" data-topic="Oracle Fusion Cloud / EBS Migration">
+                  <span>Discuss Oracle Architecture</span>
+                  <span class="btn-arrow">→</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Practice 2: Data & AI Platforms with Interactive GenAI Assistant Demo -->
+          <article class="practice-feature-card reverse architectural-showcase scroll-reveal-card" id="practice-data-ai">
+            <div class="practice-media-pane">
+              <div class="practice-photo-frame">
+                <img 
+                  src="Assets/images/Grounded Data.png" 
+                  alt="Data and AI Platforms - Snowflake, Databricks, Bedrock, and dbt"
+                  class="practice-photo"
+                  loading="lazy">
+                <div class="media-vignette-scrim"></div>
+                <div class="media-floating-tag">
+                  <span class="live-pulse"></span>
+                  <span>Grounded Vector Fabric</span>
+                </div>
+              </div>
+
+              <!-- Interactive Live AI Proposal Assistant Mockup / Terminal Monitor -->
+              <div class="interactive-practice-demo terminal-monitor">
+                <div class="demo-top-bar terminal-bar">
+                  <div class="terminal-traffic-lights">
+                    <span class="traffic-light red"></span>
+                    <span class="traffic-light yellow"></span>
+                    <span class="traffic-light green"></span>
+                  </div>
+                  <span class="demo-badge purple-badge">INTERACTIVE GENAI DEMO</span>
+                  <button type="button" class="demo-action-btn" id="btnTriggerAiDemo">Run Citation Search →</button>
+                </div>
+                <div class="terminal-body demo-ai-prompt-box">
+                  <div class="ai-query-line">
+                    <span class="ai-prompt-lbl">Query:</span>
+                    <span class="ai-prompt-txt">"Draft methodology section for clinical compliance audit..."</span>
+                  </div>
+                  <div class="ai-response-box" id="aiResponseBox">
+                    <span class="ai-typing" id="aiTypingText">Click 'Run Citation Search' to simulate grounded Bedrock response...</span>
+                    <div class="citation-pills" id="citationPills" hidden>
+                      <span class="citation-chip">✓ Clinical SOP v4.2 [p. 18]</span>
+                      <span class="citation-chip">✓ Winning 2024 RFP [Doc #881]</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="practice-content-pane">
+              <div class="practice-meta">
+                <span class="pill-badge pill-purple">Lakehouse</span>
+                <span class="practice-subtitle">Snowflake, Databricks, Bedrock &amp; dbt</span>
+              </div>
+              <h3 class="practice-heading">Data &amp; AI Platforms</h3>
+              <p class="practice-desc">
+                Unifying siloed systems into governed modern cloud data warehouses with grounded, citation-backed enterprise AI assistants for proposal drafting and contract analytics.
+              </p>
+              <div class="practice-capabilities feature-grid-wrap">
+                <div class="cap-heading">Core Capabilities:</div>
+                <div class="cap-grid pill-matrix">
+                  <div class="cap-item"><span class="cap-check"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M2.5 6.2L4.6 8.5L9.5 3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Automated dbt Transformations</span></div>
+                  <div class="cap-item"><span class="cap-check"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M2.5 6.2L4.6 8.5L9.5 3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Grounded RFP GenAI Assistant</span></div>
+                  <div class="cap-item"><span class="cap-check"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M2.5 6.2L4.6 8.5L9.5 3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Unified Financial KPI Dashboards</span></div>
+                  <div class="cap-item"><span class="cap-check"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M2.5 6.2L4.6 8.5L9.5 3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Single Source of Truth &amp; Governance</span></div>
+                </div>
+              </div>
+              <div class="practice-footer">
+                <a href="#contact-section" class="btn btn-outline" data-topic="Snowflake / Databricks Lakehouse">
+                  <span>Discuss Data Platforms</span>
+                  <span class="btn-arrow">→</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Practice 3: Cloud Automation with Interactive Quoting Speedrun Simulator -->
+          <article class="practice-feature-card architectural-showcase scroll-reveal-card" id="practice-cloud-auto">
+            <div class="practice-media-pane">
+              <div class="practice-photo-frame">
+                <img 
+                  src="Assets/images/Cloud Automation.png" 
+                  alt="Cloud Automation - CPQ, Event Pipelines, and FinOps"
+                  class="practice-photo"
+                  loading="lazy">
+                <div class="media-vignette-scrim"></div>
+                <div class="media-floating-tag">
+                  <span class="live-pulse"></span>
+                  <span>Event-Driven Microservices</span>
+                </div>
+              </div>
+
+              <!-- Interactive Live CPQ Speedrun Simulator / Terminal Monitor -->
+              <div class="interactive-practice-demo terminal-monitor">
+                <div class="demo-top-bar terminal-bar">
+                  <div class="terminal-traffic-lights">
+                    <span class="traffic-light red"></span>
+                    <span class="traffic-light yellow"></span>
+                    <span class="traffic-light green"></span>
+                  </div>
+                  <span class="demo-badge green-badge">QUOTING SPEEDRUN</span>
+                  <button type="button" class="demo-action-btn" id="btnRunCpqDemo">Calculate Quote Speed →</button>
+                </div>
+                <div class="terminal-body cpq-speedrun-box">
+                  <div class="speedrun-meter-row">
+                    <div class="speedrun-item legacy">
+                      <span class="s-label">Legacy Spreadsheet Method:</span>
+                      <strong class="s-val text-rose">72 Hours (3 Days)</strong>
+                    </div>
+                    <div class="speedrun-item aark">
+                      <span class="s-label">AARK Automated CPQ Pipeline:</span>
+                      <strong class="s-val text-cyan" id="cpqTimer">20 Minutes</strong>
+                    </div>
+                  </div>
+                  <div class="speedrun-bar-track">
+                    <div class="speedrun-bar-fill" id="cpqBarFill" style="width: 25%;"></div>
+                  </div>
+                  <div class="speedrun-status-text" id="cpqStatusText">Margin verification &amp; PDF generation automated. 0% rogue discounts.</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="practice-content-pane">
+              <div class="practice-meta">
+                <span class="pill-badge pill-green">Speedup</span>
+                <span class="practice-subtitle">CPQ, Event Pipelines &amp; FinOps</span>
+              </div>
+              <h3 class="practice-heading">Cloud Automation</h3>
+              <p class="practice-desc">
+                Eliminating manual friction between CRM, complex sales quoting, invoicing, and cross-platform inventory syncing with event-driven automation.
+              </p>
+              <div class="practice-capabilities feature-grid-wrap">
+                <div class="cap-heading">Core Capabilities:</div>
+                <div class="cap-grid pill-matrix">
+                  <div class="cap-item"><span class="cap-check"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M2.5 6.2L4.6 8.5L9.5 3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Automated 20-Min Quoting Systems</span></div>
+                  <div class="cap-item"><span class="cap-check"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M2.5 6.2L4.6 8.5L9.5 3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Zero-Spreadsheet Margin Logic</span></div>
+                  <div class="cap-item"><span class="cap-check"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M2.5 6.2L4.6 8.5L9.5 3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>AWS &amp; Azure FinOps Optimization</span></div>
+                  <div class="cap-item"><span class="cap-check"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M2.5 6.2L4.6 8.5L9.5 3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Event-Driven Microservices</span></div>
+                </div>
+              </div>
+              <div class="practice-footer">
+                <a href="#contact-section" class="btn btn-outline" data-topic="Sales Quoting (CPQ) & CRM Flow">
+                  <span>Discuss Workflow Automation</span>
+                  <span class="btn-arrow">→</span>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHAPTER 03: Field Documentaries (Verified Client Case Studies as Interactive Stories) -->
+    <section class="section case-studies-section" id="case-studies-section">
+      <div class="container">
+        <div class="section-heading text-center scroll-fade-in">
+          <div class="heading-badge-wrap">
+            <span class="pill-badge pill-blue">Senior Architect Led Deployments</span>
+          </div>
+          <span class="section-tag">Chapter 03 • Verified Field Proof</span>
+          <h2 class="section-title">Real Case Studies. Verified Outcomes.</h2>
+          <p class="section-lead">
+            Dive into three real-world transformations where senior AARK practitioners delivered software that eliminated manual spreadsheet bottlenecks and created lasting ROI.
+          </p>
+        </div>
+
+        <!-- Case Studies Interactive Selector Tabs -->
+        <div class="case-tabs-container scroll-fade-in">
+          <div class="case-tabs-nav" role="tablist">
+            <button class="case-tab active" data-case="1" role="tab" aria-selected="true">
+              <span class="tab-index">01</span>
+              <span class="tab-text">Healthcare Services (GenAI RFP)</span>
+            </button>
+            <button class="case-tab" data-case="2" role="tab" aria-selected="false">
+              <span class="tab-index">02</span>
+              <span class="tab-text">Equipment Distributor (20-Min CPQ)</span>
+            </button>
+            <button class="case-tab" data-case="3" role="tab" aria-selected="false">
+              <span class="tab-index">03</span>
+              <span class="tab-text">Multi-Entity Enterprise (Snowflake)</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Case Study Dynamic Panels -->
+        <div class="case-panels-viewport">
+          <!-- Case 1 Panel -->
+          <article class="case-panel active" id="casePanel1">
+            <div class="case-visual-col">
+              <div class="case-image-frame">
+                <img src="Assets/images/Healthcare Services.png" alt="AI-Powered Proposal & RFP Drafting Automation" class="case-cover-img">
+                <div class="case-overlay-pill">Healthcare Services Organization</div>
+              </div>
+              <div class="case-stack-strip">
+                <span class="tech-chip">GenAI Document Extraction</span>
+                <span class="tech-chip">Vector Lakehouse</span>
+                <span class="tech-chip">AWS Bedrock</span>
+                <span class="tech-chip">FastAPI</span>
+                <span class="tech-chip">React</span>
+              </div>
+            </div>
+
+            <div class="case-narrative-col">
+              <span class="case-eyebrow">Case Study 01 • Healthcare</span>
+              <h3 class="case-narrative-title">AI-Powered Proposal &amp; RFP Drafting Automation</h3>
+              <p class="case-narrative-sub">Turned multi-day RFP searches into a citation-grounded enterprise assistant.</p>
+
+              <!-- Transformation Story (The Challenge vs The AARK Solution) -->
+              <div class="transformation-cards">
+                <div class="trans-card challenge">
+                  <div class="trans-header">
+                    <span class="trans-badge badge-red">The Challenge</span>
+                  </div>
+                  <p>A rapidly growing healthcare services organization was losing high-value contract bids due to slow proposal turnaround. Prior winning answers, case studies, and compliance methodologies were buried across disconnected shared drives and legacy documents.</p>
+                </div>
+
+                <div class="trans-card solution">
+                  <div class="trans-header">
+                    <span class="trans-badge badge-blue">The AARK Solution</span>
+                  </div>
+                  <p>AARK Innovations indexed the organization's entire proposal archive, clinical methodology decks, and credential databases into a secure enterprise vector lakehouse. We delivered an internal assistant that automatically generates first-draft answers, flags sections requiring human SME review, and provides source citations with one click.</p>
+                </div>
+              </div>
+
+              <!-- Verified Metrics Bar with Circular Animated SVG Progress -->
+              <div class="case-metrics-bar">
+                <div class="case-stat">
+                  <div class="svg-radial-wrap">
+                    <svg viewBox="0 0 80 80" class="radial-gauge-svg">
+                      <circle cx="40" cy="40" r="32" class="gauge-bg"/>
+                      <circle cx="40" cy="40" r="32" class="gauge-fill stroke-cyan" style="stroke-dasharray: 201; stroke-dashoffset: 80;"/>
+                    </svg>
+                    <span class="radial-num text-cyan">-60%</span>
+                  </div>
+                  <span class="stat-lbl">Drafting Time on first drafts</span>
+                </div>
+
+                <div class="case-stat">
+                  <div class="svg-radial-wrap">
+                    <svg viewBox="0 0 80 80" class="radial-gauge-svg">
+                      <circle cx="40" cy="40" r="32" class="gauge-bg"/>
+                      <circle cx="40" cy="40" r="32" class="gauge-fill stroke-blue" style="stroke-dasharray: 201; stroke-dashoffset: 40;"/>
+                    </svg>
+                    <span class="radial-num text-blue">2x</span>
+                  </div>
+                  <span class="stat-lbl">Quarterly RFP Throughput</span>
+                </div>
+
+                <div class="case-stat">
+                  <div class="svg-radial-wrap">
+                    <svg viewBox="0 0 80 80" class="radial-gauge-svg">
+                      <circle cx="40" cy="40" r="32" class="gauge-bg"/>
+                      <circle cx="40" cy="40" r="32" class="gauge-fill stroke-purple" style="stroke-dasharray: 201; stroke-dashoffset: 20;"/>
+                    </svg>
+                    <span class="radial-num text-purple">4 Wks</span>
+                  </div>
+                  <span class="stat-lbl">Kickoff to Production V1</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Case 2 Panel -->
+          <article class="case-panel" id="casePanel2">
+            <div class="case-visual-col">
+              <div class="case-image-frame">
+                <img src="Assets/images/Equipment Distributor.png" alt="Streamlined Sales Quoting & CRM Automation" class="case-cover-img">
+                <div class="case-overlay-pill">90-Person Equipment Distributor</div>
+              </div>
+              <div class="case-stack-strip">
+                <span class="tech-chip">CRM Workflow Engine</span>
+                <span class="tech-chip">Pricing Rule APIs</span>
+                <span class="tech-chip">ERP Integration</span>
+                <span class="tech-chip">Automated PDF Generation</span>
+              </div>
+            </div>
+
+            <div class="case-narrative-col">
+              <span class="case-eyebrow">Case Study 02 • Distribution</span>
+              <h3 class="case-narrative-title">Streamlined Sales Quoting &amp; CRM Automation</h3>
+              <p class="case-narrative-sub">From 3-day spreadsheet bottlenecks down to 20-minute closed quotes.</p>
+
+              <div class="transformation-cards">
+                <div class="trans-card challenge">
+                  <div class="trans-header">
+                    <span class="trans-badge badge-red">The Challenge</span>
+                  </div>
+                  <p>Complex custom quoting was executed through fragile, unversioned Excel spreadsheets with tiered margin formulas trapped in key employees' heads, causing multi-day sales delays and pricing inconsistencies.</p>
+                </div>
+
+                <div class="trans-card solution">
+                  <div class="trans-header">
+                    <span class="trans-badge badge-blue">The AARK Solution</span>
+                  </div>
+                  <p>We eliminated the spreadsheets entirely by encoding complex product catalog rules directly into their CRM. We automated proposal PDF compilation, margin verification, and established automated management approval routing for out-of-band discounts.</p>
+                </div>
+              </div>
+
+              <div class="case-metrics-bar">
+                <div class="case-stat">
+                  <div class="svg-radial-wrap">
+                    <svg viewBox="0 0 80 80" class="radial-gauge-svg">
+                      <circle cx="40" cy="40" r="32" class="gauge-bg"/>
+                      <circle cx="40" cy="40" r="32" class="gauge-fill stroke-cyan" style="stroke-dasharray: 201; stroke-dashoffset: 30;"/>
+                    </svg>
+                    <span class="radial-num text-cyan">20m</span>
+                  </div>
+                  <span class="stat-lbl">Quote Speed (from 3 days)</span>
+                </div>
+
+                <div class="case-stat">
+                  <div class="svg-radial-wrap">
+                    <svg viewBox="0 0 80 80" class="radial-gauge-svg">
+                      <circle cx="40" cy="40" r="32" class="gauge-bg"/>
+                      <circle cx="40" cy="40" r="32" class="gauge-fill stroke-emerald" style="stroke-dasharray: 201; stroke-dashoffset: 0;"/>
+                    </svg>
+                    <span class="radial-num text-emerald">0%</span>
+                  </div>
+                  <span class="stat-lbl">Margin Errors prevented</span>
+                </div>
+
+                <div class="case-stat">
+                  <div class="svg-radial-wrap">
+                    <svg viewBox="0 0 80 80" class="radial-gauge-svg">
+                      <circle cx="40" cy="40" r="32" class="gauge-bg"/>
+                      <circle cx="40" cy="40" r="32" class="gauge-fill stroke-purple" style="stroke-dasharray: 201; stroke-dashoffset: 70;"/>
+                    </svg>
+                    <span class="radial-num text-purple">-45%</span>
+                  </div>
+                  <span class="stat-lbl">Sales Cycle Acceleration</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Case 3 Panel -->
+          <article class="case-panel" id="casePanel3">
+            <div class="case-visual-col">
+              <div class="case-image-frame">
+                <img src="Assets/images/Multi-Entity Enterprise.png" alt="Unified Snowflake Data Warehouse & Executive Analytics" class="case-cover-img">
+                <div class="case-overlay-pill">Multi-Entity Enterprise</div>
+              </div>
+              <div class="case-stack-strip">
+                <span class="tech-chip">Snowflake</span>
+                <span class="tech-chip">dbt Core</span>
+                <span class="tech-chip">Fivetran</span>
+                <span class="tech-chip">Power BI / Tableau</span>
+                <span class="tech-chip">Azure Cloud</span>
+              </div>
+            </div>
+
+            <div class="case-narrative-col">
+              <span class="case-eyebrow">Case Study 03 • Enterprise Analytics</span>
+              <h3 class="case-narrative-title">Unified Snowflake Data Warehouse &amp; Executive Analytics</h3>
+              <p class="case-narrative-sub">Eliminated disparate reporting silos and 11 hours of weekly spreadsheet crunching.</p>
+
+              <div class="transformation-cards">
+                <div class="trans-card challenge">
+                  <div class="trans-header">
+                    <span class="trans-badge badge-red">The Challenge</span>
+                  </div>
+                  <p>Executive leadership across finance, sales, and supply chain were presenting conflicting revenue numbers. Each division extracted raw data from different legacy systems at inconsistent intervals, burning 11 hours of senior analyst time every week.</p>
+                </div>
+
+                <div class="trans-card solution">
+                  <div class="trans-header">
+                    <span class="trans-badge badge-blue">The AARK Solution</span>
+                  </div>
+                  <p>AARK Innovations designed and deployed a unified modern data platform on Snowflake. We built automated dbt transformation pipelines that ingest operational data overnight, compute consistent enterprise KPIs, and deliver clean executive dashboards.</p>
+                </div>
+              </div>
+
+              <div class="case-metrics-bar">
+                <div class="case-stat">
+                  <div class="svg-radial-wrap">
+                    <svg viewBox="0 0 80 80" class="radial-gauge-svg">
+                      <circle cx="40" cy="40" r="32" class="gauge-bg"/>
+                      <circle cx="40" cy="40" r="32" class="gauge-fill stroke-cyan" style="stroke-dasharray: 201; stroke-dashoffset: 55;"/>
+                    </svg>
+                    <span class="radial-num text-cyan">-11h</span>
+                  </div>
+                  <span class="stat-lbl">Manual Reporting saved / wk</span>
+                </div>
+
+                <div class="case-stat">
+                  <div class="svg-radial-wrap">
+                    <svg viewBox="0 0 80 80" class="radial-gauge-svg">
+                      <circle cx="40" cy="40" r="32" class="gauge-bg"/>
+                      <circle cx="40" cy="40" r="32" class="gauge-fill stroke-blue" style="stroke-dasharray: 201; stroke-dashoffset: 0;"/>
+                    </svg>
+                    <span class="radial-num text-blue">1</span>
+                  </div>
+                  <span class="stat-lbl">Single Governed Truth</span>
+                </div>
+
+                <div class="case-stat">
+                  <div class="svg-radial-wrap">
+                    <svg viewBox="0 0 80 80" class="radial-gauge-svg">
+                      <circle cx="40" cy="40" r="32" class="gauge-bg"/>
+                      <circle cx="40" cy="40" r="32" class="gauge-fill stroke-purple" style="stroke-dasharray: 201; stroke-dashoffset: 90;"/>
+                    </svg>
+                    <span class="radial-num text-purple">-22%</span>
+                  </div>
+                  <span class="stat-lbl">Optimized Warehouse Spend</span>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHAPTER 04: The Operational Velocity Simulator (Interactive ROI Command Center) -->
+    <section class="section calculator-section" id="calculator-section">
+      <div class="container">
+        <div class="calculator-hero-box scroll-reveal-card">
+          <div class="calc-header-center">
+            <span class="pill-badge pill-purple">Dynamic Financial Modeling</span>
+            <span class="section-tag d-block mt-2">Chapter 04 • Value Realization</span>
+            <h2 class="calc-main-title">Interactive Automation Savings Calculator</h2>
+            <p class="calc-intro">
+              Simulate your weekly hours saved, annual capacity unlocked, and operational cycle speedup based on your operations staff.
+            </p>
+          </div>
+
+          <div class="calc-interactive-layout">
+            <!-- Left Slider & Inputs -->
+            <div class="calc-slider-panel">
+              <div class="slider-head">
+                <div class="slider-title-col">
+                  <label for="teamSizeSlider" class="calc-label">Knowledge Workers / Operations Staff</label>
+                  <span class="calc-sublabel">Drag slider or select benchmark preset</span>
+                </div>
+                <div class="slider-counter-bubble" id="sliderValue">45 Staff</div>
+              </div>
+
+              <div class="slider-track-wrap">
+                <input 
+                  type="range" 
+                  id="teamSizeSlider" 
+                  min="5" 
+                  max="150" 
+                  step="1" 
+                  value="45" 
+                  class="custom-range-slider"
+                  aria-label="Select number of operations staff">
+                <div class="slider-presets">
+                  <button type="button" class="preset-btn" data-preset="15">15 (Lean)</button>
+                  <button type="button" class="preset-btn active" data-preset="45">45 (Mid-Market)</button>
+                  <button type="button" class="preset-btn" data-preset="90">90 (Enterprise)</button>
+                  <button type="button" class="preset-btn" data-preset="150">150+ (Multi-Division)</button>
+                </div>
+              </div>
+
+              <!-- Animated SVG Wave Visualizer for Capacity -->
+              <div class="capacity-gauge-box">
+                <div class="gauge-labels">
+                  <span>Simulated Capacity Unlocked:</span>
+                  <strong id="gaugePercentage">~158 hrs / week reclaimed</strong>
+                </div>
+                <div class="gauge-svg-container">
+                  <svg viewBox="0 0 500 40" fill="none" class="capacity-wave-svg" preserveAspectRatio="none">
+                    <path d="M 0 25 Q 125 10, 250 25 T 500 25" stroke="var(--border-subtle)" stroke-width="2"/>
+                    <path id="svgWavePath" d="M 0 25 Q 125 10, 250 25 T 500 25" stroke="url(#waveGrad)" stroke-width="3" class="animated-wave-line"/>
+                    <defs>
+                      <linearGradient id="waveGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#00E5FF"/>
+                        <stop offset="50%" stop-color="#3B82F6"/>
+                        <stop offset="100%" stop-color="#A855F7"/>
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </div>
+                <div class="gauge-bar-track">
+                  <div class="gauge-bar-fill" id="gaugeBarFill" style="width: 32%;"></div>
+                </div>
+              </div>
+
+              <div class="calc-benchmark-note">
+                <span>💡 Benchmark: ~3.5 weekly hours recovered per knowledge worker through automated dbt pipelines, AI extraction, and CRM quote rules.</span>
+              </div>
+            </div>
+
+            <!-- Right Results Cards with Count-up Elements -->
+            <div class="calc-metrics-panel">
+              <div class="calc-kpi-card cyan-card">
+                <div class="kpi-header">
+                  <span class="kpi-icon">⏱️</span>
+                  <span class="kpi-tag">Weekly Recovery</span>
+                </div>
+                <div class="kpi-big-value" id="calcHoursSaved">~158 hrs</div>
+                <div class="kpi-name">Manual Hours Saved / Week</div>
+                <div class="kpi-desc">Eliminated from manual spreadsheets, copy-pasting, and proposal searches.</div>
+              </div>
+
+              <div class="calc-kpi-card emerald-card">
+                <div class="kpi-header">
+                  <span class="kpi-icon">💰</span>
+                  <span class="kpi-tag">Annual Value</span>
+                </div>
+                <div class="kpi-big-value" id="calcCapacityVal">$394k/yr</div>
+                <div class="kpi-name">Annual Capacity Unlocked</div>
+                <div class="kpi-desc">Redirected into direct client engagement and revenue-generating execution.</div>
+              </div>
+
+              <div class="calc-kpi-card purple-card">
+                <div class="kpi-header">
+                  <span class="kpi-icon">⚡</span>
+                  <span class="kpi-tag">Operational Velocity</span>
+                </div>
+                <div class="kpi-big-value" id="calcSpeedupVal">3.2x</div>
+                <div class="kpi-name">Faster Operational Cycle Time</div>
+                <div class="kpi-desc">Accelerated deal closing speed from quote creation to ERP order book.</div>
+              </div>
+
+              <div class="calc-action-row">
+                <a href="#contact-section" class="btn btn-primary btn-full" id="calcCtaBtn">
+                  <span>Apply This ROI to Your Architecture Roadmap</span>
+                  <span class="btn-arrow">→</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHAPTER 05: Transparent Engagement & Cloud Ecosystem -->
+    <section class="section models-section" id="models-section">
+      <div class="container">
+        <div class="section-heading text-center scroll-fade-in">
+          <span class="section-tag">Chapter 05 • Mobilization Models</span>
+          <h2 class="section-title">Three Transparent Engagement Models</h2>
+          <p class="section-lead">
+            Choose the delivery structure that fits your project maturity, timeline, and internal team capacity.
+          </p>
+        </div>
+
+        <div class="models-grid">
+          <!-- Model 01 -->
+          <div class="tier-card scroll-reveal-card" data-delay="100">
+            <div class="tier-badge">Model 01</div>
+            <h3 class="tier-name">Fixed-Scope Modernization</h3>
+            <p class="tier-scenario">Defined Oracle EBS to Cloud migrations, discrete dbt warehouse builds, or sales quoting automation.</p>
+            <div class="tier-inclusions">
+              <div class="inclusions-label">Key Inclusions:</div>
+              <ul class="inclusions-list">
+                <li><span class="check-mark">✓</span> Guaranteed total cost &amp; delivery date</li>
+                <li><span class="check-mark">✓</span> Milestone-based progress sign-offs</li>
+                <li><span class="check-mark">✓</span> Full code repository &amp; IP handover</li>
+              </ul>
+            </div>
+            <div class="tier-action">
+              <a href="#contact-section" class="btn btn-outline btn-full" data-topic="Fixed-Scope Modernization">
+                Request Scoping Assessment
+              </a>
+            </div>
+          </div>
+
+          <!-- Model 02: Featured -->
+          <div class="tier-card featured-tier scroll-reveal-card" data-delay="200">
+            <div class="popular-ribbon">Most Popular</div>
+            <div class="tier-badge">Model 02</div>
+            <h3 class="tier-name">Dedicated Principal Pod</h3>
+            <p class="tier-scenario">Senior architects embedded alongside your team to accelerate multi-quarter roadmap execution without overhead.</p>
+            <div class="tier-inclusions">
+              <div class="inclusions-label">Key Inclusions:</div>
+              <ul class="inclusions-list">
+                <li><span class="check-mark">✓</span> 100% Senior Principal Engineers</li>
+                <li><span class="check-mark">✓</span> Flexible monthly sprint reallocation</li>
+                <li><span class="check-mark">✓</span> Continuous knowledge transfer to staff</li>
+              </ul>
+            </div>
+            <div class="tier-action">
+              <a href="#contact-section" class="btn btn-primary btn-full" data-topic="Dedicated Architecture Pod">
+                Check Pod Availability →
+              </a>
+            </div>
+          </div>
+
+          <!-- Model 03 -->
+          <div class="tier-card scroll-reveal-card" data-delay="300">
+            <div class="tier-badge">Model 03</div>
+            <h3 class="tier-name">Architecture Advisory</h3>
+            <p class="tier-scenario">Targeted architectural reviews, Oracle quarterly release stabilization, and GenAI security readiness audits.</p>
+            <div class="tier-inclusions">
+              <div class="inclusions-label">Key Inclusions:</div>
+              <ul class="inclusions-list">
+                <li><span class="check-mark">✓</span> Vendor-neutral stack evaluations</li>
+                <li><span class="check-mark">✓</span> Security &amp; data governance audits</li>
+                <li><span class="check-mark">✓</span> Executive steering committee guidance</li>
+              </ul>
+            </div>
+            <div class="tier-action">
+              <a href="#contact-section" class="btn btn-outline btn-full" data-topic="Architecture Advisory">
+                Book Advisory Session
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Technology Ecosystem with Animated Interactive Constellation Mesh -->
+    <section class="section tech-section" id="tech-section">
+      <div class="container">
+        <div class="section-heading text-center scroll-fade-in">
+          <span class="section-tag">Certified Tooling</span>
+          <h2 class="section-title">The Enterprise Technology Ecosystem We Deploy</h2>
+          <p class="section-lead">
+            Certified architects deploying production-hardened infrastructure directly in your cloud tenants.
+          </p>
+        </div>
+
+        <div class="ecosystem-cards-grid">
+          <!-- Oracle Fusion -->
+          <div class="tech-tile scroll-reveal-card" data-delay="50">
+            <div class="tech-tile-top">
+              <div class="tech-symbol oracle-glow">ORCL</div>
+              <span class="tech-tag">Cloud ERP</span>
+            </div>
+            <h3 class="tech-tile-name">Oracle Fusion</h3>
+            <p class="tech-tile-desc">Cloud ERP &amp; E-Business Suite modernizations and OIC orchestration across SCM, Financials &amp; HCM.</p>
+          </div>
+
+          <!-- Snowflake -->
+          <div class="tech-tile scroll-reveal-card" data-delay="100">
+            <div class="tech-tile-top">
+              <div class="tech-symbol snow-glow">SNOW</div>
+              <span class="tech-tag">Data Cloud</span>
+            </div>
+            <h3 class="tech-tile-name">Snowflake</h3>
+            <p class="tech-tile-desc">Enterprise Data Cloud, secure data sharing, zero-copy cloning, and unified reporting warehouses.</p>
+          </div>
+
+          <!-- Databricks -->
+          <div class="tech-tile scroll-reveal-card" data-delay="150">
+            <div class="tech-tile-top">
+              <div class="tech-symbol dbrk-glow">DBRK</div>
+              <span class="tech-tag">Lakehouse</span>
+            </div>
+            <h3 class="tech-tile-name">Databricks</h3>
+            <p class="tech-tile-desc">Lakehouse architecture, Apache Spark streaming, vector search pipelines, and MLflow governance.</p>
+          </div>
+
+          <!-- AWS Cloud -->
+          <div class="tech-tile scroll-reveal-card" data-delay="200">
+            <div class="tech-tile-top">
+              <div class="tech-symbol aws-glow">AWS</div>
+              <span class="tech-tag">GenAI &amp; Lakehouse</span>
+            </div>
+            <h3 class="tech-tile-name">AWS Cloud</h3>
+            <p class="tech-tile-desc">Bedrock Foundation Models, Redshift lakehouse, serverless Lambda microservices &amp; FinOps optimization.</p>
+          </div>
+
+          <!-- Azure Cloud -->
+          <div class="tech-tile scroll-reveal-card" data-delay="250">
+            <div class="tech-tile-top">
+              <div class="tech-symbol azur-glow">AZUR</div>
+              <span class="tech-tag">OpenAI &amp; Fabric</span>
+            </div>
+            <h3 class="tech-tile-name">Azure Cloud</h3>
+            <p class="tech-tile-desc">Azure OpenAI Services, Microsoft Fabric, synapse analytics, and enterprise tenant security governance.</p>
+          </div>
+
+          <!-- dbt Core -->
+          <div class="tech-tile scroll-reveal-card" data-delay="300">
+            <div class="tech-tile-top">
+              <div class="tech-symbol dbt-glow">DBT</div>
+              <span class="tech-tag">Modeling</span>
+            </div>
+            <h3 class="tech-tile-name">dbt Core</h3>
+            <p class="tech-tile-desc">Modern data transformation, lineage tracking, automated schema testing, and self-documenting DAG pipelines.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Contact & Consultation Section -->
+    <section class="section contact-section" id="contact-section">
+      <div class="container">
+        <div class="contact-box-grid">
+          <!-- Left Briefing Column -->
+          <div class="contact-brief-col scroll-fade-in">
+            <span class="section-tag">Start The Conversation</span>
+            <h2 class="contact-title">Ready to Modernize Your Operations?</h2>
+            <p class="contact-lead">
+              Whether you need to upgrade an Oracle ERP environment, unify fragmented data silos, or build a custom AI drafting pipeline, we'll give you clear answers, accurate scope, and realistic timelines.
+            </p>
+
+            <div class="office-cards-list">
+              <div class="office-card">
+                <div class="office-icon">📍</div>
+                <div class="office-text">
+                  <strong>Headquarters</strong>
+                  <span>Fort Mill, SC (Greater Charlotte Metro Area) • Onsite &amp; Remote Delivery</span>
+                </div>
+              </div>
+
+              <div class="office-card">
+                <div class="office-icon">✉️</div>
+                <div class="office-text">
+                  <strong>Direct Email</strong>
+                  <a href="mailto:hello@aarkinn.com" class="office-email">hello@aarkinn.com</a>
+                  <span class="office-sub">Direct to Senior Leadership</span>
+                </div>
+              </div>
+
+              <div class="office-card">
+                <div class="office-icon">⏱️</div>
+                <div class="office-text">
+                  <strong>Consultation Format</strong>
+                  <span>30-Minute Architecture Discovery • Zero Sales Pressure</span>
+                </div>
+              </div>
+
+              <div class="office-card">
+                <div class="office-icon">🛡️</div>
+                <div class="office-text">
+                  <strong>Trust &amp; Confidentiality</strong>
+                  <span>NDAs honored prior to deep-dive architecture discussions. Direct senior response within 24 hours.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Consultation Form -->
+          <div class="contact-form-col scroll-reveal-card">
+            <div class="form-card">
+              <div class="form-header-box">
+                <h3 class="form-heading">Request Technical Discovery</h3>
+                <p class="form-subheading">Speak directly with a principal architect about your modernization goals.</p>
+              </div>
+
+              <form id="consultationForm" class="consultation-form" novalidate>
+                <div class="form-fields-grid">
+                  <div class="field-wrap">
+                    <label for="fullName">Full Name <span class="req">*</span></label>
+                    <input type="text" id="fullName" name="fullName" placeholder="Sarah Jenkins" required>
+                    <span class="err-text" id="nameError"></span>
+                  </div>
+
+                  <div class="field-wrap">
+                    <label for="workEmail">Work Email <span class="req">*</span></label>
+                    <input type="email" id="workEmail" name="workEmail" placeholder="sjenkins@enterprise.com" required>
+                    <span class="err-text" id="emailError"></span>
+                  </div>
+
+                  <div class="field-wrap">
+                    <label for="companyName">Company Name <span class="req">*</span></label>
+                    <input type="text" id="companyName" name="companyName" placeholder="Acme Logistics Corp" required>
+                    <span class="err-text" id="companyError"></span>
+                  </div>
+
+                  <div class="field-wrap">
+                    <label for="modernizationArea">Modernization Area <span class="req">*</span></label>
+                    <select id="modernizationArea" name="modernizationArea" required>
+                      <option value="" disabled selected>Select priority focus...</option>
+                      <option value="Oracle Fusion Cloud / EBS Migration">Oracle Fusion Cloud / EBS Migration</option>
+                      <option value="Snowflake / Databricks Lakehouse">Snowflake / Databricks Lakehouse</option>
+                      <option value="GenAI RFP / Contract Automation">GenAI RFP / Contract Automation</option>
+                      <option value="Sales Quoting (CPQ) & CRM Flow">Sales Quoting (CPQ) &amp; CRM Flow</option>
+                      <option value="Dedicated Architecture Pod">Dedicated Architecture Pod</option>
+                      <option value="Fixed-Scope Modernization">Fixed-Scope Modernization</option>
+                      <option value="Architecture Advisory">Architecture Advisory</option>
+                    </select>
+                    <span class="err-text" id="areaError"></span>
+                  </div>
+
+                  <div class="field-wrap full-width">
+                    <label for="projectGoals">Current Bottleneck or Project Goals</label>
+                    <textarea id="projectGoals" name="projectGoals" rows="4" placeholder="Tell us about your current systems, volume bottlenecks, or specific timeline targets..."></textarea>
+                  </div>
+                </div>
+
+                <div class="form-submit-wrap">
+                  <button type="submit" class="btn btn-primary btn-full btn-submit" id="submitFormBtn">
+                    <span>Request Technical Discovery</span>
+                    <span class="btn-arrow">→</span>
+                  </button>
+                </div>
+
+                <div class="form-privacy-note">
+                  🔒 Strictly confidential under mutual NDA guidelines. No junior sales reps.
+                </div>
+              </form>
+
+              <!-- Success State -->
+              <div class="form-success-box" id="formSuccessState" hidden>
+                <div class="success-checkmark">✓</div>
+                <h3>Discovery Request Received</h3>
+                <p>Thank you. A senior technical architect from AARK Innovations will review your brief and reach out within 24 hours at <strong id="confirmEmail"></strong>.</p>
+                <button type="button" class="btn btn-glass" id="resetFormBtn">Submit Another Inquiry</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 9. Footer -->
+  <footer class="site-footer">
+    <div class="container footer-layout">
+      <div class="footer-top-grid">
+        <div class="footer-brand-box">
+          <div class="brand-group">
+            <div class="brand-symbol-box">
+              <svg class="brand-symbol" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 28L18 8L28 28" stroke="#3B82F6" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12 20H24" stroke="#00E5FF" stroke-width="2.4" stroke-linecap="round"/>
+                <circle cx="18" cy="14" r="2.2" fill="#00E5FF"/>
+              </svg>
+            </div>
+            <div class="brand-text">
+              <span class="brand-name">AARK <span class="brand-accent">Innovations</span></span>
+              <span class="category-badge">Enterprise Modernization</span>
+            </div>
+          </div>
+          <p class="footer-blurb">
+            Enterprise modernization firm based in Fort Mill, South Carolina. We help mid-market and corporate organizations streamline operations through Oracle ERP, Data &amp; AI platforms, and cloud consulting.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-title">Navigation</h4>
+          <ul class="footer-nav-list">
+            <li><a href="#hero-section">Overview</a></li>
+            <li><a href="#difference-section">The Difference</a></li>
+            <li><a href="#practice-section">Practices</a></li>
+            <li><a href="#case-studies-section">Case Studies</a></li>
+            <li><a href="#calculator-section">ROI Simulator</a></li>
+            <li><a href="#models-section">Engagement Models</a></li>
+            <li><a href="#tech-section">Technology Ecosystem</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-title">Consulting Practices</h4>
+          <ul class="footer-nav-list">
+            <li><a href="#practice-section">Oracle Fusion Cloud &amp; EBS</a></li>
+            <li><a href="#practice-section">Snowflake &amp; Bedrock Data Fabric</a></li>
+            <li><a href="#practice-section">CPQ &amp; Event-Driven Automation</a></li>
+            <li><a href="#calculator-section">ROI &amp; Capacity Calculator</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-title">Direct Office</h4>
+          <div class="footer-contact-row">
+            <span class="f-icon">📍</span>
+            <span>Fort Mill, SC 29707 • Charlotte Metro Area</span>
+          </div>
+          <div class="footer-contact-row">
+            <span class="f-icon">✉️</span>
+            <a href="mailto:hello@aarkinn.com" class="f-mail">hello@aarkinn.com</a>
+          </div>
+          <div class="pod-availability-badge">
+            <span class="pulse-dot"></span>
+            <span>Principal Pods Active for Q1/Q2</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <p class="copyright">© 2024–2026 AARK Innovations. All rights reserved.</p>
+        <div class="legal-links">
+          <a href="#contact-section">Privacy &amp; Mutual NDA</a>
+          <span>•</span>
+          <a href="#contact-section">Terms of Engagement</a>
+          <span>•</span>
+          <a href="#hero-section">Back to Top ↑</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js?v=2.3"></script>
+</body>
+</html>
